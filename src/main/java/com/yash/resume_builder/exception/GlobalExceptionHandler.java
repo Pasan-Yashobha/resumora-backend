@@ -43,9 +43,20 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
     }
 
+//    @ExceptionHandler(Exception.class)
+//    public ResponseEntity<Map<String, Object>> handleGenericException(Exception ex) {
+//        log.info("Inside GlobalExceptionHandler: handleGenericException()");
+//        Map<String, Object> response = new HashMap<>();
+//        response.put("message", "Something went wrong. Contact system administrator.");
+//        response.put("errors", ex.getMessage());
+//
+//        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
+//    }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Map<String, Object>> handleGenericException(Exception ex) {
-        log.info("Inside GlobalExceptionHandler: handleGenericException()");
+        log.error("Unhandled exception occurred", ex); 
+
         Map<String, Object> response = new HashMap<>();
         response.put("message", "Something went wrong. Contact system administrator.");
         response.put("errors", ex.getMessage());
