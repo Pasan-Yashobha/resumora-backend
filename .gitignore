@@ -43,3 +43,4 @@ application-secrets.properties
 *.zip
 *.tar.gz
 *.rar
+src/main/resources/application.properties 
