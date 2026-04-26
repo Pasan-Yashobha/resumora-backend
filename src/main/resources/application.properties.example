@@ -3,28 +3,22 @@ spring.application.name=resume-builder
 # MongoDB
 spring.data.mongodb.uri=mongodb://localhost:27017/resumebuilder_db
 
-# Email (Brevo SMTP)
-spring.mail.host=smtp-relay.brevo.com
-spring.mail.port=587
-spring.mail.username=YOUR_BREVO_SMTP_LOGIN
-spring.mail.password=YOUR_BREVO_SMTP_KEY
-spring.mail.properties.mail.smtp.auth=true
-spring.mail.properties.mail.starttls.enable=true
-spring.mail.protocol=smtp
-spring.mail.properties.mail.smtp.from=YOUR_EMAIL
+# Email (Brevo API)
+brevo.api.key=BREVO_API_KEY
+app.email.from=EMAIL
 
 # App URL
 app.base.url=http://localhost:8080
 
 # Cloudinary
-cloudinary.cloud-name=YOUR_CLOUD_NAME
-cloudinary.api-key=YOUR_API_KEY
-cloudinary.api-secret=YOUR_API_SECRET
+cloudinary.cloud-name=CLOUDINARY_NAME
+cloudinary.api-key=CLOUDINARY_API_KEY
+cloudinary.api-secret=CLOUDINARY_API_SECRET
 
 # JWT
-jwt.secret=YOUR_LONG_SECRET_KEY_MIN_32_CHARS
+jwt.secret=LONG_SECRET_KEY
 jwt.expiration=604800000
 
 # Stripe
-stripe.secret.key=sk_test_YOUR_KEY
-stripe.webhook.secret=whsec_YOUR_WEBHOOK_SECRET
+stripe.secret.key=sk_test_SECRET_KEY
+stripe.webhook.secret=whsec_WEBHOOK_SECRET

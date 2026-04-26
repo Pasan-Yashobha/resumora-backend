@@ -77,31 +77,25 @@ spring.data.mongodb.uri=mongodb://localhost:27017/resumebuilder_db
 # OR for Atlas:
 # spring.data.mongodb.uri=mongodb+srv://USER:PASS@cluster.mongodb.net/resumebuilder_db
 
-# Email (Brevo SMTP)
-spring.mail.host=smtp-relay.brevo.com
-spring.mail.port=587
-spring.mail.username=YOUR_BREVO_SMTP_LOGIN
-spring.mail.password=YOUR_BREVO_SMTP_KEY
-spring.mail.properties.mail.smtp.auth=true
-spring.mail.properties.mail.starttls.enable=true
-spring.mail.protocol=smtp
-spring.mail.properties.mail.smtp.from=your@email.com
+# Email (Brevo API)
+brevo.api.key=BREVO_API_KEY
+app.email.from=EMAIL
 
 # App URL
 app.base.url=http://localhost:8080
 
 # Cloudinary
-cloudinary.cloud-name=YOUR_CLOUD_NAME
-cloudinary.api-key=YOUR_API_KEY
-cloudinary.api-secret=YOUR_API_SECRET
+cloudinary.cloud-name=CLOUDINARY_NAME
+cloudinary.api-key=CLOUDINARY_API_KEY
+cloudinary.api-secret=CLOUDINARY_API_SECRET
 
 # JWT
-jwt.secret=your-very-long-secret-key-at-least-32-chars
+jwt.secret=LONG_SECRET_KEY
 jwt.expiration=604800000
 
 # Stripe
-stripe.secret.key=sk_test_YOUR_STRIPE_SECRET_KEY
-stripe.webhook.secret=whsec_YOUR_WEBHOOK_SECRET
+stripe.secret.key=sk_test_SECRET_KEY
+stripe.webhook.secret=whsec_WEBHOOK_SECRET
 ```
 
 ### Run Locally
@@ -156,4 +150,4 @@ docker run -p 8080:8080 --env-file .env resumora-backend
 
 ---
 
-Made with love by Pasan Yashobha
+Made with love by Pasan Yashobha.

@@ -55,7 +55,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Map<String, Object>> handleGenericException(Exception ex) {
-        log.error("Unhandled exception occurred", ex); 
+        log.error("Unhandled exception occurred", ex);
 
         Map<String, Object> response = new HashMap<>();
         response.put("message", "Something went wrong. Contact system administrator.");
